@@ -8,34 +8,34 @@ namespace CSH_DZ_27_03
 {
     internal class Laptop
     {
-        static private String model_;
-        static private double processorGhz_;
-        static private int ram_;
-        static private int memory_;
-        static private int weight_;
+        private string _model;
+        private double _processorGhz;
+        private int _ram;
+        private int _memory;
+        private int _weight;
 
 
         public Laptop()
         {
-            model_ = String.Empty;
-            processorGhz_ = 0;
-            ram_ = 0;
-            memory_ = 0;
-            weight_ = 0;
+            _model = string.Empty;
+            _processorGhz = 0;
+            _ram = 0;
+            _memory = 0;
+            _weight = 0;
         }
 
-        public Laptop(String model, double processorGhz, int ram, int memory, int weight)
+        public Laptop(string model, double processorGhz, int ram, int memory, int weight)
         {
-            model_ = model;
-            processorGhz_ = processorGhz;
-            ram_ = ram;
-            memory_ = memory;
-            weight_ = weight;
+            _model = model;
+            _processorGhz = processorGhz;
+            _ram = ram;
+            _memory = memory;
+            _weight = weight;
         }
 
-        static public void Info(Laptop laptop)
+        public void Info(Laptop laptop)
         {
-            Console.WriteLine($"Модель: {model_} \nТактовая частота процессора: {processorGhz_} GHz \nОперативная память: {ram_} Gb \nОбъём памяти: {memory_} Gb \nВес: {weight_} Kg");
+            Console.WriteLine($"Модель: {_model} \nТактовая частота процессора: {_processorGhz} GHz \nОперативная память: {_ram} Gb \nОбъём памяти: {_memory} Gb \nВес: {_weight} Kg");
         }
     }
 }

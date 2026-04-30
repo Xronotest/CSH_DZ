@@ -9,31 +9,31 @@ namespace CSH_DZ_27_03
 {
     internal class PC
     {
-        static private String model_;
-        static private double processorGhz_;
-        static private int ram_;
-        static private int memory_;
+        private string _model;
+        private double _processorGhz;
+        private int _ram;
+        private int _memory;
 
 
         public PC() 
         { 
-            model_ = String.Empty;
-            processorGhz_ = 0;
-            ram_ = 0;
-            memory_ = 0;
+            _model = string.Empty;
+            _processorGhz = 0;
+            _ram = 0;
+            _memory = 0;
         }
 
-        public PC(String model, double processorGhz, int ram, int memory)
+        public PC(string model, double processorGhz, int ram, int memory)
         {
-            model_ = model;
-            processorGhz_ = processorGhz;
-            ram_ = ram;
-            memory_ = memory;
+            _model = model;
+            _processorGhz = processorGhz;
+            _ram = ram;
+            _memory = memory;
         }
 
-        static public void Info(PC pc)
+        public void Info(PC pc)
         {
-            Console.WriteLine($"Модель: {model_} \nТактовая частота процессора: {processorGhz_} GHz \nОперативная память: {ram_} Gb \nОбъём памяти: {memory_} Gb");
+            Console.WriteLine($"Модель: {_model} \nТактовая частота процессора: {_processorGhz} GHz \nОперативная память: {_ram} Gb \nОбъём памяти: {_memory} Gb");
         }
     }
 }

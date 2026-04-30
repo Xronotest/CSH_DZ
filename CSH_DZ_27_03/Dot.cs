@@ -8,9 +8,9 @@ namespace CSH_DZ_27_03
 {
     internal class Dot
     {        
-        static private int X;
-        static private int Y;
-        static private int Z;
+        private int X;
+        private int Y;
+        private int Z;
 
         public Dot() 
         { 
@@ -25,12 +25,12 @@ namespace CSH_DZ_27_03
             Z = z;
         }
 
-        static public void PrintCoords()
+        public void PrintCoords()
         {
             Console.WriteLine($"Текущие координаты: {X}, {Y}, {Z}");
         }
 
-        static public void MoveBy(int dx, int dy, int dz)
+        public void MoveBy(int dx, int dy, int dz)
         {
             Console.WriteLine(" ");
             X += dx;

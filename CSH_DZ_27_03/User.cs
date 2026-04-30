@@ -8,32 +8,32 @@ namespace CSH_DZ_27_03
 {
     internal class User
     {
-        static private String surname_;
-        static private String name_;
-        static private String patronymic_;
-        static private int age_;
+        private string _surname;
+        private string _name;
+        private string _patronymic;
+        private int _age;
 
         public User()
         {
-            surname_ = String.Empty;
-            name_ = String.Empty;
-            patronymic_ = String.Empty;
-            age_ = 0;
+            _surname = string.Empty;
+            _name = string.Empty;
+            _patronymic = string.Empty;
+            _age = 0;
         }
 
-        public User(String surname, String name, String patronymic, int age)
+        public User(string surname, string name, string patronymic, int age)
         {
-            surname_ = surname;
-            name_ = name;
-            patronymic_ = patronymic;
-            age_ = age;
+            _surname = surname;
+            _name = name;
+            _patronymic = patronymic;
+            _age = age;
 
         }
 
-        static public void Fio(User human)
+        public void Fio(User human)
         {
             StringBuilder fio = new StringBuilder();
-            fio.Append(surname_ + " " + name_ + " " + patronymic_);
+            fio.Append(_surname + " " + _name + " " + _patronymic);
             Console.WriteLine(fio.ToString());
         }
     }

@@ -10,36 +10,56 @@ namespace CSH_DZ_27_03
     internal class Method
     {
         
-        static private String name_;
-        static private String author_;
-        static private int year_;
-        static private int lists_;
+        private String _name;
+
+        public string GetName()
+        {
+            return _name;
+        }
+
+
+        public void SetName(string value)
+        {
+            _name = value;
+        }
+        private String _author;
+
+        public string GetAuthor()
+        {
+            return _author;
+        }
+        private int _year;
+        private int _lists;
+        private string _publisher;
+
+        public string GetPublisher()
+        {
+            return _publisher;
+        }
+
+        public void SetPublisher(string value)
+        {
+            _publisher = value;
+        }
 
         public Method()
         {
-            name_ = String.Empty;
-            author_ = String.Empty;
-            year_ = 0;
-            lists_ = 0;
+            _author = String.Empty;
+            _year = 0;
+            _lists = 0;
         }
 
-        public Method(String name, String author, int year, int lists)
+        public Method(String author, int year, int lists)
         {
-            name_ = name;
-            author_ = author;
-            year_ = year;
-            lists_ = lists;
+            _author = author;
+            _year = year;
+            _lists = lists;
         }
 
 
-        static public void Info(Method method)
+        public void Info(Method method)
         {
-            if (author_ == String.Empty)
-            {
-                author_ = "Publisher";
-            }
-
-             Console.WriteLine($"\nНазвание: {name_} \nАвтор: {author_} \nГод выпуска {year_} \nОбъём в листах: {lists_}");
+             Console.WriteLine($"\nНазвание: {GetName} \nАвтор: {GetAuthor} \nГод выпуска {_year} \nОбъём в листах: {_lists} \nИздательство: {GetPublisher}");
         }
       
     }

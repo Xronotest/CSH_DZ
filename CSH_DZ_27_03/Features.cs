@@ -8,28 +8,32 @@ namespace CSH_DZ_27_03
 {
     internal class Features
     {
-        private String name_ { get; set; }
-        private String author_ { get; } = "Publisher";
-        private int year_;
-        private int lists_;
+        private string _name;
+
+        public string Name { get { return _name; } set { _name = value; } }
+        private String _author;
+
+        public string Autor { get { return _author; } }
+        private int _year;
+        private int _lists;
 
         public Features()
         {
-            name_ = String.Empty;
-            author_ = String.Empty;
-            year_ = 0;
-            lists_ = 0;
+            _author = String.Empty;
+            _year = 0;
+            _lists = 0;
         }
 
-        public Features(String name, String author, int year, int lists)
+        public Features(String author, int year, int lists)
         {
-            name_ = name;
-            author_ = author;
-            year_ = year;
-            lists_ = lists;
+            _author = author;
+            _year = year;
+            _lists = lists;
         }
 
-        public String Info =>
-        $"\nНазвание: {name_} \nАвтор: {author_} \nГод выпуска: {year_} \nОбъём в листах: {lists_}";
+        public String Publisher { get; set; }
+       
+
+        public String Info { get { return "\nНазвание: " + Name + "\nАвтор: " + Autor + "\nГод выпуска: " + _year + "\nОбъём в листах: " + _lists + "\nИздательство: " + Publisher; } }
     }
 }
