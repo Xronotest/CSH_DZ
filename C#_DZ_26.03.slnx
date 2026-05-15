@@ -2,6 +2,10 @@
   <Project Path="C#_DZ_26.03/C#_DZ_26.03.csproj" />
   <Project Path="CSH_DZ_03.04/CSH_DZ_03.04.csproj" Id="25126638-a403-4aa8-9e11-a4f6fd807739" />
   <Project Path="CSH_DZ_03.04_2/CSH_DZ_03.04_2.csproj" Id="81107f6a-d4ca-4e7f-9493-f00589bf3c0b" />
+  <Project Path="CSH_DZ_10.04/CSH_DZ_10.04.csproj" Id="4cee1648-92f2-4230-ac98-40c794eb6119" />
+  <Project Path="CSH_DZ_10.04_2/CSH_DZ_10.04_2.csproj" Id="a4c4f6a3-ae39-4c9d-a053-c05ba6af30d8" />
+  <Project Path="CSH_DZ_24.04/CSH_DZ_24.04.csproj" Id="3ba20bdc-4122-4f8f-a2cb-28314f2d8b19" />
   <Project Path="CSH_DZ_26_03_2/CSH_DZ_26_03_2.csproj" Id="d0410a4f-0d92-40ee-9146-7031ed237659" />
   <Project Path="CSH_DZ_27_03/CSH_DZ_27_03.csproj" Id="14e6bce4-65aa-43f7-978c-9d39384475d7" />
+  <Project Path="CSH_Pracrice_17.04/CSH_Pracrice_17.04.csproj" Id="07565c90-fcc5-4e96-9fdf-6f2d9884898b" />
 </Solution>
