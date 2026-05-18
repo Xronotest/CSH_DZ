@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Encodings.Web;
+using System.Text.Json;
 
 namespace CSH_Practice_07._05
 {
@@ -31,6 +33,7 @@ namespace CSH_Practice_07._05
                         "9 - Показать недоступные медиа\n" +
                         "10 - Книги после года\n" +
                         "11 - Фильмы по длительности\n" +
+                        "12 - Экспортировать данные в JSON\n" +
                         "0 - Выход\n" +
                         "Выбор: ");
 
@@ -284,6 +287,35 @@ namespace CSH_Practice_07._05
                         }
 
                         if (isEmpty) Console.WriteLine("Ничего не найдено");
+                    }
+                    else if (userChoise == 12)
+                    {
+                        Console.Write("Введите имя файла: ");
+                        string fileName = Convert.ToString(Console.ReadLine());
+
+                        if (string.IsNullOrWhiteSpace(fileName))
+                        {
+                            fileName = "media.json";
+                        }
+
+                        var data = new
+                        {
+                            Books = books.GetAll(),
+                            Movies = movies.GetAll(),
+                            MusicAlbums = albums.GetAll()
+                        };
+
+                        JsonSerializerOptions options = new JsonSerializerOptions()
+                        {
+                            WriteIndented = true,
+                            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+                        };
+
+                        string json = JsonSerializer.Serialize(data, options);
+
+                        File.WriteAllText(fileName, json);
+
+                        Console.WriteLine($"Данные экспортированы в файл {fileName}");
                     }
                     else if (userChoise == 0)
                     {
