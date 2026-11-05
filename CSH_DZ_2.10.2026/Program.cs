@@ -21,21 +21,9 @@ namespace CSH_DZ_2._10._2026
                 {
                     Console.WriteLine("[Поток 1] Ожидание завершения Notepad...");
                     Thread.Sleep(3000);
+                    //proc.CloseMainWindow();
                 }
 
-
-                /* Я что только не перепробовал, только это его закрыть может
-                 * 
-                 * Пробовал:
-                 * proc.Kill();
-                 * 
-                 * if (!proc.HasExited)
-                 * {
-                 * proc.Kill();
-                 * proc.WaitForExit();
-                 * }
-                 * 
-                 */
 
                 Process.Start(new ProcessStartInfo
                 {
